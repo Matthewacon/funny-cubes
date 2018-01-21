@@ -45,12 +45,12 @@ int main() {
  unsigned int vertShader, fragShader, shaderProgram;
  customCompileShader(
   GL_VERTEX_SHADER,
-  "/PATH/src/shaders/test_shader.vert",
+  "../src/shaders/test_shader.vert",
   &vertShader
  );
  customCompileShader(
   GL_FRAGMENT_SHADER,
-  "/PATH/src/shaders/test_shader.frag",
+  "../src/shaders/test_shader.frag",
   &fragShader
  );
  shaderProgram = glCreateProgram();
@@ -121,7 +121,7 @@ int main() {
 // glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 // int vertexNewColourLocation = glGetUniformLocation(shaderProgram, "newColour");
 // double updateTime = 0;
- unsigned int texture = load2DTexture("/PATH/resources/thonk.png");
+ unsigned int texture = load2DTexture("../resources/thonk.png");
  //Activate shader before assigning uniforms
  glUseProgram(shaderProgram);
  GLint theTexture = glGetUniformLocation(shaderProgram, "newTexture");

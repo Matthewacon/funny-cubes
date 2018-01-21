@@ -6,8 +6,7 @@
 
 int customCompileShader(GLenum shaderType, const char *file, unsigned int *shader) {
  static char compileLog[512];
- FILE *fp;
- fp = fopen(file, "r");
+ FILE *fp = fopen(file, "r");
  if (!fp) {
   std::cerr << "Error opening file '" << file << "'!" << std::endl;
   return -1;
