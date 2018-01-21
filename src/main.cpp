@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <tgmath.h>
-#include "ogl_utils.h"
+#include "ogl_utils.hpp"
 
 //Resize callback
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
@@ -45,12 +45,12 @@ int main() {
  unsigned int vertShader, fragShader, shaderProgram;
  customCompileShader(
   GL_VERTEX_SHADER,
-  "/home/matthew/Desktop/OpenGL_Learning/src/shaders/test_shader.vert",
+  "/PATH/src/shaders/test_shader.vert",
   &vertShader
  );
  customCompileShader(
   GL_FRAGMENT_SHADER,
-  "/home/matthew/Desktop/OpenGL_Learning/src/shaders/test_shader.frag",
+  "/PATH/src/shaders/test_shader.frag",
   &fragShader
  );
  shaderProgram = glCreateProgram();
@@ -121,7 +121,7 @@ int main() {
 // glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 // int vertexNewColourLocation = glGetUniformLocation(shaderProgram, "newColour");
 // double updateTime = 0;
- unsigned int texture = load2DTexture("/home/matthew/Desktop/OpenGL_Learning/kergan.jpg");
+ unsigned int texture = load2DTexture("/PATH/resources/thonk.png");
  //Activate shader before assigning uniforms
  glUseProgram(shaderProgram);
  GLint theTexture = glGetUniformLocation(shaderProgram, "newTexture");
