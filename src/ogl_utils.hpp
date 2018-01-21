@@ -43,7 +43,6 @@ int customCompileShader(GLenum shaderType, const char *file, unsigned int *shade
 unsigned int load2DTexture(const char* file) {
  int width, height, nrChannels;
  unsigned int texture;
-// std::string path = FileSystem::getPath("src/kergan.jpg");
  unsigned char *data = stbi_load(file, &width, &height, &nrChannels, 0);
  if (data) {
   glGenTextures(1, &texture);
