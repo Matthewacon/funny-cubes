@@ -1,2 +1,1 @@
-# -_-
-a
+# funny_cubes
